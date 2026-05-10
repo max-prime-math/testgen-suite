@@ -1,14 +1,9 @@
 # Session Bootstrap
 
-Use this at the start of a session:
+Use this at the start of a new session:
 
 ```text
 Read WORKSPACE_OVERVIEW.md, CURRENT_STATE.md, COMMANDS.md, and DECISIONS.md first.
-Then tell me:
-1. what this workspace is,
-2. which app appears active,
-3. what the shortest next step is,
-4. what you need from me, if anything.
-Keep the response short.
+Then summarize the workspace in 4 short bullets and tell me the shortest next step.
+If anything is ambiguous, ask only the minimum question needed.
 ```
-

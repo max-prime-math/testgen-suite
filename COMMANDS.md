@@ -4,6 +4,7 @@ Use these as the default entry points when working in each repo.
 
 ## Root Workspace
 
+- `sed -n '1,220p' NEW_SESSION.md`
 - `./workspace-git status`
 - `./workspace-git add WORKSPACE_OVERVIEW.md CURRENT_STATE.md COMMANDS.md DECISIONS.md PROMPT_BOOTSTRAP.md`
 - `./workspace-git commit -m "Update workspace docs"`

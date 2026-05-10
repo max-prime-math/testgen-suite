@@ -29,6 +29,7 @@ This folder is a meta-workspace that contains four separate git repositories:
 - Update the workspace state after meaningful commits or repo changes.
 - Prefer a small set of canonical commands over one-off shell invocations.
 - When you're ready, add a GitHub remote to the root meta-repo and push `main` like any other repo.
+- For any new session, start with `NEW_SESSION.md` and the four root docs listed there.
 
 ## Active Focus
 
