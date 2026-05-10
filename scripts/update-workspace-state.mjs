@@ -12,6 +12,16 @@ function git(dir, args) {
     return execFileSync('git', ['-C', dir, ...args], {
       encoding: 'utf8',
       stdio: ['ignore', 'pipe', 'ignore'],
+      env: (() => {
+        const env = { ...process.env };
+        delete env.GIT_DIR;
+        delete env.GIT_WORK_TREE;
+        delete env.GIT_INDEX_FILE;
+        delete env.GIT_PREFIX;
+        delete env.GIT_OBJECT_DIRECTORY;
+        delete env.GIT_ALTERNATE_OBJECT_DIRECTORIES;
+        return env;
+      })(),
     }).trim();
   } catch {
     return null;
@@ -30,16 +40,8 @@ function repoStatus(dir) {
 const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
 const generated = [];
 generated.push('<!-- BEGIN GENERATED -->');
-generated.push(`Last refreshed: ${new Date().toISOString()}`);
-generated.push('');
 generated.push('## Updated Repositories');
 generated.push('');
-
-const rootRepoPath = process.env.CODEX_HOME
-  ? join(process.env.CODEX_HOME, 'testgen-suite-root-repo')
-  : join(process.env.HOME || '/home/max', '.codex', 'memories', 'testgen-suite-root-repo');
-const rootStatus = repoStatus(rootRepoPath);
-generated.push(`- root-meta: \`${rootStatus.branch}\` @ \`${rootStatus.head}\` (${rootStatus.dirtyCount} dirty), last commit: ${rootStatus.lastCommit}`);
 
 for (const app of manifest.apps) {
   const abs = join(root, app.path);

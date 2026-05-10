@@ -5,6 +5,7 @@
 - The four apps remain separate git repositories.
 - The root folder acts as a meta-workspace, not a monorepo.
 - Cross-app coordination happens through shared docs and generated state files.
+- The root meta-repo lives in `~/.codex/memories/testgen-suite-root-repo` and is operated through `workspace-git`.
 
 ## Import Strategy
 
@@ -18,4 +19,3 @@
 - Original PDFs and BNK files remain the canonical inputs.
 - Generated outputs may be kept for verification during development.
 - Generated PDFs are disposable once the pipeline is trusted.
-

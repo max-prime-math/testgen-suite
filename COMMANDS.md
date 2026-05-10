@@ -7,6 +7,8 @@ Use these as the default entry points when working in each repo.
 - `./workspace-git status`
 - `./workspace-git add WORKSPACE_OVERVIEW.md CURRENT_STATE.md COMMANDS.md DECISIONS.md PROMPT_BOOTSTRAP.md`
 - `./workspace-git commit -m "Update workspace docs"`
+- `./workspace-git remote add origin <github-url>`
+- `./workspace-git push -u origin main`
 - `node scripts/update-workspace-state.mjs`
 
 ## bnk-decoder
@@ -40,4 +42,3 @@ Use these as the default entry points when working in each repo.
 - `python -m src.main`
 - `python -m src.main --years 2018,2019`
 - `python -m src.main --no-form-b`
-

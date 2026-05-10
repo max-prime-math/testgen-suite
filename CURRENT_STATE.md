@@ -22,11 +22,8 @@ The root meta-repo is managed through `./workspace-git` and stored under `~/.cod
 ## Generated State
 
 <!-- BEGIN GENERATED -->
-Last refreshed: 2026-05-10T19:03:31.983Z
-
 ## Updated Repositories
 
-- root-meta: `master` @ `n/a` (10 dirty), last commit: no commits yet
 - bnk-decoder: `main` @ `2c23f3b` (0 dirty), last commit: feat: add typst preview and decode quality tooling
 - ocr-frq: `main` @ `4cbcdd3` (10 dirty), last commit: Improve password manager recognition for API key field
 - ocr-mcq: `main` @ `2ca08c1` (5 dirty), last commit: Improve figure extraction and LaTeX cleanup

@@ -12,7 +12,7 @@ bootstrap() {
   fi
 
   mkdir -p "$GITDIR_BASE"
-  git init "$GITDIR" >/dev/null
+  git init -b main "$GITDIR" >/dev/null
   git -C "$GITDIR" config core.worktree "$ROOT_DIR"
   git -C "$GITDIR" config core.hooksPath "$ROOT_DIR/.githooks"
 }
@@ -20,4 +20,3 @@ bootstrap() {
 bootstrap
 
 exec git --git-dir="$GIT_PATH" --work-tree="$ROOT_DIR" "$@"
-

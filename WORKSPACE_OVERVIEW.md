@@ -28,6 +28,7 @@ This folder is a meta-workspace that contains four separate git repositories:
 - Use `workspace-git` for the root meta-repo because the environment's root `.git` directory is read-only.
 - Update the workspace state after meaningful commits or repo changes.
 - Prefer a small set of canonical commands over one-off shell invocations.
+- When you're ready, add a GitHub remote to the root meta-repo and push `main` like any other repo.
 
 ## Active Focus
 
