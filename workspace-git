@@ -1,0 +1,23 @@
+#!/bin/sh
+set -eu
+
+ROOT_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+GITDIR_BASE="${CODEX_HOME:-$HOME/.codex/memories}"
+GITDIR="$GITDIR_BASE/testgen-suite-root-repo"
+GIT_PATH="$GITDIR/.git"
+
+bootstrap() {
+  if [ -d "$GIT_PATH" ]; then
+    return 0
+  fi
+
+  mkdir -p "$GITDIR_BASE"
+  git init "$GITDIR" >/dev/null
+  git -C "$GITDIR" config core.worktree "$ROOT_DIR"
+  git -C "$GITDIR" config core.hooksPath "$ROOT_DIR/.githooks"
+}
+
+bootstrap
+
+exec git --git-dir="$GIT_PATH" --work-tree="$ROOT_DIR" "$@"
+

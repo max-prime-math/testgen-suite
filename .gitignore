@@ -1,0 +1,17 @@
+# Root workspace meta-repo ignore rules.
+# Child repos are managed separately.
+
+/bnk-decoder/
+/ocr-frq/
+/ocr-mcq/
+/test-generator/
+
+# Local workspace/tooling state.
+/.agents/
+/.claude/
+/.codex/
+
+# Generated workspace state.
+/CURRENT_STATE.md.bak
+/workspace-state.json
+

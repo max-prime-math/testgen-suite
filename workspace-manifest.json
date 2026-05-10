@@ -1,0 +1,26 @@
+{
+  "workspace": "testgen-suite",
+  "apps": [
+    {
+      "name": "bnk-decoder",
+      "path": "bnk-decoder",
+      "remote": "git@github.com:max-prime-math/bnk-decoder.git"
+    },
+    {
+      "name": "ocr-frq",
+      "path": "ocr-frq",
+      "remote": "git@github.com:max-prime-math/ocr-frq.git"
+    },
+    {
+      "name": "ocr-mcq",
+      "path": "ocr-mcq",
+      "remote": "git@github.com:max-prime-math/ocr-mcq.git"
+    },
+    {
+      "name": "test-generator",
+      "path": "test-generator",
+      "remote": "https://github.com/max-prime-math/test-generator.git"
+    }
+  ]
+}
+
