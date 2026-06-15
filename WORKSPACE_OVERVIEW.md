@@ -17,7 +17,7 @@ This folder is a meta-workspace that contains four separate git repositories:
 ## Intended Flow
 
 - `ocr-frq` and `ocr-mcq` ingest PDFs and produce usable question data.
-- `bnk-decoder` ingests BNK files and exports a portable question representation.
+- `bnk-decoder` ingests BNK files and exports a portable question representation, including binary-backed narratives, multi-part questions, assets, and diagnostics.
 - `test-generator` accepts manual paste-in content plus best-effort JSON imports from the other tools.
 - Test PDFs and generated exports are verification artifacts, not canonical data.
 
@@ -35,4 +35,6 @@ This folder is a meta-workspace that contains four separate git repositories:
 
 - Stabilize `ocr-frq` first.
 - Improve OCR and BNK decoding quality, especially graphs and figures.
+- Preserve shared narratives and question structure in `bnk-decoder` so decoded questions still read like the original ExamView prompts.
+- Fingerprint all BNK families and split the decoder into safe dialects before broadening heuristics globally.
 - Build a best-effort import layer in `test-generator`.
