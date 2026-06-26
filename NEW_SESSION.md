@@ -10,6 +10,7 @@ Use this whenever you open the workspace in any LLM tool.
   - `CURRENT_STATE.md`
   - `COMMANDS.md`
   - `DECISIONS.md`
+  - `testgen-ingest/README.md`
 
 ## 2. Identify The Task
 
@@ -24,7 +25,7 @@ If you do not know yet, ask the assistant to infer the likely active app from `C
 ## 3. Use The Short Bootstrap Prompt
 
 ```text
-Read WORKSPACE_OVERVIEW.md, CURRENT_STATE.md, COMMANDS.md, and DECISIONS.md first.
+Read WORKSPACE_OVERVIEW.md, CURRENT_STATE.md, COMMANDS.md, DECISIONS.md, and testgen-ingest/README.md first.
 Then tell me:
 1. what this workspace is,
 2. which app appears active,
@@ -43,4 +44,3 @@ Keep it short.
 - Re-open the same four root docs.
 - Do not rely on the prior model session to remember the project.
 - Treat the docs as the shared memory layer.
-

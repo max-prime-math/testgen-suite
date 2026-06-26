@@ -5,8 +5,9 @@ Use these as the default entry points when working in each repo.
 ## Root Workspace
 
 - `sed -n '1,220p' NEW_SESSION.md`
+- `sed -n '1,220p' testgen-ingest/README.md`
 - `./workspace-git status`
-- `./workspace-git add WORKSPACE_OVERVIEW.md CURRENT_STATE.md COMMANDS.md DECISIONS.md PROMPT_BOOTSTRAP.md`
+- `./workspace-git add WORKSPACE_OVERVIEW.md CURRENT_STATE.md COMMANDS.md DECISIONS.md PROMPT_BOOTSTRAP.md workspace-manifest.json testgen-ingest`
 - `./workspace-git commit -m "Update workspace docs"`
 - `./workspace-git remote add origin <github-url>`
 - `./workspace-git push -u origin main`
@@ -14,6 +15,7 @@ Use these as the default entry points when working in each repo.
 
 ## bnk-decoder
 
+- `cd testgen-ingest/tools/bnk-decoder`
 - `npm install`
 - `npm run dev`
 - `npm run check`
@@ -29,6 +31,7 @@ Use these as the default entry points when working in each repo.
 
 ## ocr-mcq
 
+- `cd testgen-ingest/tools/ocr-mcq`
 - `python -m venv .venv`
 - `source .venv/bin/activate`
 - `pip install -r requirements.txt`
@@ -39,6 +42,7 @@ Use these as the default entry points when working in each repo.
 
 ## ocr-frq
 
+- `cd testgen-ingest/tools/ocr-frq`
 - `python -m pip install -r requirements.txt`
 - `python -m src.main`
 - `python -m src.main --years 2018,2019`

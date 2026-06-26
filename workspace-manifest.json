@@ -3,17 +3,17 @@
   "apps": [
     {
       "name": "bnk-decoder",
-      "path": "bnk-decoder",
+      "path": "testgen-ingest/tools/bnk-decoder",
       "remote": "git@github.com:max-prime-math/bnk-decoder.git"
     },
     {
       "name": "ocr-frq",
-      "path": "ocr-frq",
+      "path": "testgen-ingest/tools/ocr-frq",
       "remote": "git@github.com:max-prime-math/ocr-frq.git"
     },
     {
       "name": "ocr-mcq",
-      "path": "ocr-mcq",
+      "path": "testgen-ingest/tools/ocr-mcq",
       "remote": "git@github.com:max-prime-math/ocr-mcq.git"
     },
     {
@@ -23,4 +23,3 @@
     }
   ]
 }
-
